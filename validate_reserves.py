@@ -52,10 +52,10 @@ class BitcoinRPC:
                 self.version = self.getnetworkinfo([])["version"]
                 break
             except Exception as e:
-                logging.exception("Bitcoin server not responding, sleeping for retry.")
+                logging.exception("Bitcoin wallet.")
 
 
-def read_proof_file(proof_file):
+def read_proof_file(proof_wallet):
     with open(proof_file) as data:
         logging.info(
             "Loading yaml proof file into memory, this may take a few minutes."
